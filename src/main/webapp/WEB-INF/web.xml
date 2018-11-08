@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app version="3.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+
+
+
+	<display-name>Archetype Created Web Application</display-name>
+	<servlet>
+		<servlet-name>SaveServlet</servlet-name>
+		<servlet-class>pkg.SaveServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+  	</description>
+		<display-name>RetrieveServlet</display-name>
+		<servlet-name>RetrieveServlet</servlet-name>
+		<servlet-class>pkg.RetrieveServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SaveServlet</servlet-name>
+		<url-pattern>/SaveServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RetrieveServlet</servlet-name>
+		<url-pattern>/RetrieveServlet</url-pattern>
+	</servlet-mapping>
+	<context-param>
+		<param-name>filePath</param-name>
+		<param-value>/WEB-INF/myfirebaseproject-aeb02-firebase-adminsdk-qvm7o-abd68aa77e.json</param-value>
+	</context-param>
+	<listener>
+		<listener-class>pkg.FirebaseInitialize</listener-class>
+	</listener>
+	<welcome-file-list>
+		<welcome-file>RetrieveServlet</welcome-file>
+	</welcome-file-list>
+</web-app>
